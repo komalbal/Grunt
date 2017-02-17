@@ -3,12 +3,6 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		
-		jenkins: {
-      			serverAddress: 'http://localhost:8080',
-      			username: 'komal',                        // if only one of username and password 
-      			password: 'komal'                      // are provided, no authentication attempted 
-    		},
-		
 		concat: {
 			options: {
 				// define a string to put between each file in the concatenated output
@@ -55,7 +49,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-jenkins');
+	
 
 	grunt.registerTask('default', ['jenkins', 'concat', 'uglify', 'jshint']);
 
