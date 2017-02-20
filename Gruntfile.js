@@ -51,6 +51,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	
 
-	grunt.registerTask('default', ['jenkins', 'concat', 'uglify', 'jshint']);
+	grunt.registerTask('default', ['concat', 'uglify', 'jshint']);
 
 };
